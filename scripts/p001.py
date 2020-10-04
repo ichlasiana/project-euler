@@ -6,6 +6,6 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 def p001(n):
-	return sum(num for num in range(n) if not num % 3 or not num % 5)
+    return sum(num for num in range(n) if not num % 3 or not num % 5)
 
 p001(1000) # Expected Answer: 233168
