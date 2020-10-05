@@ -8,15 +8,12 @@
 
 def p002(n):
     sum = 0
-    temp = 0                # store temporary curr values
     curr = 1                # first/current fibonacci terms
     next = 2                # second/next fibonacci terms
     while curr <= n:        # curr value do not exceed n
         if curr % 2 == 0:   # find even
             sum += curr     # sum even-valued terms
-        temp = curr         # store curr value to temp
-        curr = next         # generate next term
-        next = temp + next  # adding the previous two terms
+        curr, next = next, curr + next  # generate next term and adding the previous two terms
     return sum
 
 p002(4000000) # Expected Output: 4613732
